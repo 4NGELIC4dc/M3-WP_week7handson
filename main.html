@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('WP-Week 7\\Honkai_Star_Rail_Wallpaper.png') center/cover no-repeat;
+      background-size: cover;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      font-family: 'Verdana', sans-serif;
+      position: relative;
+    }
+
+    h1 img {
+      max-width: 50%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    main {
+      margin: 15px;
+    }
+
+    nav {
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: rgba(3, 80, 150, 0.5);
+    }
+
+    nav li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    nav a {
+      font-family: 'Verdana', sans-serif;
+      text-decoration: none;
+      color: #ffffff;
+      padding: 8px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0066cc;
+    }
+
+    canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+    }
+	
+	hr {
+      margin-top: 50px; 
+      margin-bottom: 50px; 
+	  border-color: #ffffff;
+	  width: 50%;
+    }
+	
+	/* for stationContent */
+	.space-areas {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.horizontal-areas {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 10px; 
+	}
+
+	.area {
+		text-align: center;
+		margin: 0 10px; 
+	}
+
+	.area img {
+		max-width: 100%; 
+		height: auto; 
+		max-height: 200px; 
+	}
+
+	.area p {
+		color: #ffffff;
+		font-family: 'Verdana', sans-serif;
+		margin: 10px 0;
+	}
+	
+	/* for charactersContent */
+	.character {
+		display: flex;
+		align-items: center;
+		margin: 0 100px;
+	}
+
+	.character img {
+		max-width: 100%;
+		height: auto;
+		max-height: 250px;
+		margin-right: 10px; 
+	}
+
+	.character div {
+		flex: 1;
+	}
+	
+	.character p {
+		color: #ffffff;
+		font-family: 'Verdana', sans-serif;
+		margin: 5px 0;
+	}
+
+    #homeContent h2,
+    #homeContent p {
+      color: #ffffff;
+      text-align: center;
+      font-family: 'Verdana', sans-serif;
+	  margin: 20px 100px; 
+    }
+	
+	#aboutContent h2,
+    #aboutContent p {
+      color: #ffffff;
+      text-align: center;
+      font-family: 'Verdana', sans-serif;
+	  margin: 20px 100px; 
+    }
+	
+	#aboutContent  h2 img {
+		max-width: 50%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	#stationContent h2,
+	#stationContent p{
+		color: #ffffff;
+		text-align: center;
+		font-family: 'Verdana', sans-serif;
+		margin: 20px 100px; 
+	}
+	
+	#stationContent  h2 img {
+		max-width: 25%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	#charactersContent h2,
+	#charactersContent p{
+		color: #ffffff;
+		text-align: center;
+		font-family: 'Verdana', sans-serif;
+		margin: 20px 100px; 
+	}
+	
+	#charactersContent  h2 img {
+		max-width: 25%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	#charactersContent {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	#contactContent {
+	  display: none;
+	}
+	
+	#contactContent h2{
+		color: #ffffff;
+		text-align: center;
+		font-family: 'Verdana', sans-serif;
+		margin: 20px 100px; 
+	}
+
+  </style>
+</head>
+<body>
+
+  <h1>
+    <img src="WP-Week 7\\Honkai_Star_Rail_Logo.png" alt="Honkai Star Rail Logo">
+    Honkai: Star Rail - Herta Space Station
+  </h1>
+
+	<nav>
+	  <ul>
+		<li><a href="#" data-section="homeContent">Home</a></li>
+		<li><a href="#" data-section="aboutContent">About</a></li>
+		<li><a href="#" data-section="stationContent">Herta Space Station</a></li>
+		<li><a href="#" data-section="charactersContent">Characters</a></li>
+		<li><a href="#" data-section="contactContent">Contact Us</a></li>
+	  </ul>
+	</nav>
+
+  <main>
+
+      <!-- Home section -->
+    <div id="homeContent" class="content-section">
+      <h2>Welcome to the Honkai: Star Rail - Herta Space Station's unofficial web page!</h2>
+      
+	  <p>This platform is accessible to both players and non-players alike, centering its attention on the initial destinations encountered by players assuming the role of the main character in the renowned online game, Honkai Star Rail. Specifically, we delve into the fascinating realm of the Herta Space Station! Our focus revolves around providing insights into the game itself, understanding the significance of the Herta Space Station, and introducing the diverse playable characters you'll encounter in this intriguing location.</p>
+    </div>
+
+      <!-- About section -->
+    <div id="aboutContent" class="content-section">
+		<h2>What is Honkai: Star Rail?
+		<img src="WP-Week 7\\Honkai_Star_Rail_Wallpaper(01).png" alt="Herta Space Station">
+		</h2>
+		
+		<p>Honkai: Star Rail is a role-playing gacha video game developed by miHoYo, published by miHoYo in mainland China and worldwide by Cognosphere, HoYoverse. It features the main character, referred to as the "Trailblazer", traveling across worlds resolving disasters caused by the "Stellaron". It is the fourth installment in the Honkai series, drawing on characters from Honkai Impact 3rd and gameplay elements from Genshin Impact (although with significant adjustments to the characters' background and personality and changes to the gameplay elements). It is also miHoYo's first turn-based game.</p>
+		
+		<p>Honkai: Star Rail follows the gameplay style of classic Japanese role-playing games: players build up a lineup of characters, and control a team of four in turn-based combat. In addition to various stats that affect characters' strength, each character has an elemental affinity that affects their ability to deal damage to certain targets, a character class referred to as a "path" that defines their role in combat, and set of unique abilities used in combat.</p>
+		
+		<p>The game is set in a science-fantasy universe in which humanity and non-human sentient beings follow the Paths of deity-like beings known as Aeons. Those who follow Paths are known as Pathstriders. The Paths are based on an ideal. Some Paths were led by deceased Aeons, but the Paths continue to exist without the influence of the Aeons. The main characters in the game follow the Path of the Trailblaze, a Path created by the deceased Akivili. The Path of the Trailblaze seeks to "explore, establish, and connect" among different worlds. The Stellaron Hunters are a major antagonistic group throughout the game, who search for and collect Stellarons across the universe, and claim to be able to see the future. The main characters are often at conflict with the Stellaron Hunters.</p>
+
+		<p>Source: <a href="https://en.wikipedia.org/wiki/Honkai%3A_Star_Rail" target="_blank" style="color: #87cefa;">Honkai: Star Rail Wiki</a></p>
+    </div>
+
+      <!-- Herta Space Station section -->
+    <div id="stationContent" class="content-section">
+		<h2>
+		What is the Herta Space Station?
+		<img src="WP-Week 7\\HSR_obj_Space_Station(1).png" alt="Herta Space Station">
+		</h2>
+		
+		<p>Herta Space Station is the first world that can be accessed upon starting the game.</p>
+
+		<p>Herta Space Station is a space station founded by Herta, Member #83 of the Genius Society. Researchers from different planets comes to work here as a researcher and most of them are faithful followers of Herta. Qualifying for a researcher role in the Herta Space Station is a hard process and is a cherished goal of the scientific community.</p>
+
+		<p>Not content with the laws of the common world, the Genius Society's Herta set her sights on the unexplained existences of the galaxy, expecting those distant mysteries to satisfy her curiosity. To this end, Herta led the establishment of a museum-like starship and launched it towards the Star Rail, starting the research work to seal all strange existences among the stars. And the famous Herta Space Station was born.</p>
+
+		<p> Nowadays, the space station possesses innumerable Curios and is a veritable space museum. A great number of researchers also live on the station. They continuously collect relics and Curios all over the cosmos, record their appearances and functions, establish systematic methods to observe and study them... ultimately finding even more confounding enigmas from their studies. That in fact, was Herta's initial goal.</p>
+
+		<p> This large "collection" often attracts jealous eyes. Various forces watch from the shadows. Due to Herta's power, the space station had rarely experienced a real crisis, and the collection and investigation work continues to operate in an orderly manner.</p>
+		
+		<hr>
+		<h2>Areas in Herta Space Station</h2>
+
+		<div class="space-areas">
+			<div class="horizontal-areas">
+				<div class="area">
+					<img src="WP-Week 7\\HSR_map_MasterControlZone.png" alt="Master Control Zone" />
+					<p>Master Control Zone</p>
+				</div>
+				<div class="area">
+					<img src="WP-Week 7\\HSR_map_BaseZone.png" alt="Base Zone" />
+					<p>Base Zone</p>
+				</div>
+				<div class="area">
+					<img src="WP-Week 7\\HSR_map_StorageZone.png" alt="Storage Zone" />
+					<p>Storage Zone</p>
+				</div>
+			</div>
+
+			<div class="horizontal-areas">
+				<div class="area">
+					<img src="WP-Week 7\\HSR_map_SupplyZone.png" alt="Supply Zone" />
+					<p>Supply Zone</p>
+				</div>
+				<div class="area">
+					<img src="WP-Week 7\\HSR_map_SeclusionZone.png" alt="Seclusion Zone" />
+					<p>Seclusion Zone</p>
+				</div>
+			</div>
+		</div>
+		<p>Source: <a href="https://honkai-star-rail.fandom.com/wiki/Herta_Space_Station" target="_blank" style="color: #87cefa;">Herta Space Station Wiki</a></p>
+	</div>
+
+	<!-- Characters section -->
+	<div id="charactersContent" class="content-section">
+		<h2>Playable Characters in Herta Space Station</h2>
+
+		<div class="character">
+			<img src="WP-Week 7\\HSR_Herta.png" alt="Character 1" />
+			<p>Herta</p>
+			<p>Herta is a 4-star character that follows the path of Erudition and has a combat type of Ice.<br><br>
+			Herta takes the form of a ball-jointed puppet depicting a petite young woman with long brown hair and purple eyes. She wears a frilled white, black, and purple dress that exposes her shoulders, adorned with a lock and chain pinned around her torso. She also wears a black beret decorated with a purple flower, and a purple choker with a key hanging from it. Her footwear of choice is a pair of dark purple and white boots. As Member #83 of the Genius Society, she is the master of the eponymous Herta Space Station, where she appears in the form of a puppet she modeled after her younger self. She is also an Emanator of Nous the Erudition.</p>
+		</div>
+
+		<div class="character">
+			<img src="WP-Week 7\\HSR_Asta.png" alt="Character 2" />
+			<p>Asta</p>
+			<p>Asta is a 4-star character that follows the path of Harmony and has a combat type of Fire.<br><br>
+			She is a slim built young woman with pink hair, a fair complexion and light blue eyes. She wears a collared white shirt with loose, detached sleeves and ruffles, a black bowtie, and a black skirt with gold accents covered with a ruffled purple overcoat. Around her waist is an unzipped pink and white colored jacket with numerous buckled belts of varying colors. She sports a lanyard around her neck with an identification card and black heels. She is the inquisitive lead astronomer responsible for handling the Herta Space Station's affairs, including managing the staff and responding to the Intelligentsia Guild.</p>
+		</div>
+
+		<div class="character">
+			<img src="WP-Week 7\\HSR_Arlan.png" alt="Character 3" />
+			<p>Arlan</p>
+			<p>Arlan is a 4-star character that follows the path of Destruction and has a combat type of Lightning.<br><br>
+			He is the head of Herta Space Station's security department, often seen with a dog named Peppy. While scientific research is beyond his understanding, Arlan is willing to risk his life to protect the staff who value research so very much. He is used to pain and wears his scars like badges of honor. Only when holding Peppy does the boy let down his guard and show a rare smile.</p>
+		</div>
+
+		<div class="character">
+			<img src="WP-Week 7\\HSR_RuanMei.png" alt="Character 3" />
+			<p>Ruan Mei</p>
+			<p>Ruan Mei is a 5-star character that follows the path of Harmony and has a combat type of Ice.<br><br>
+			Ruan Mei is a young woman with turquoise eyes, fair skin and long brown hair with dark-green streaks that is loosely tied behind her head with a hairpin. She wears an earring on her left ear and a pearl necklace around her neck. She wears an elegant dress coloured dark-green, brown and white with gold highlights, elbow-length dark-green gloves and a silver bangle around her left wrist. She also has flowers on the centre-left side of her hips. Her right thigh has a dark-green thigh garter shaped like a double-helix DNA strand with a flower in the middle. She also wears black high heels with gold patterns. She is a sweet-tempered and elegant scholar and Member #81 of the Genius Society. She is an expert in the biological sciences and does her research on the origin of life in a secret corner of the universe.</p>
+		</div>
+		
+		<p style="color: #ffffff; text-align: center; font-family: 'Verdana', sans-serif;">Source:
+		  <ul style="list-style: none; padding: 0; margin: 0; text-align: center; font-family: 'Verdana', sans-serif;">
+			<li style="display: inline; margin-right: 10px; color: #87cefa;">
+			  <a href="https://honkai-star-rail.fandom.com/wiki/Herta" target="_blank" style="color: #87cefa; text-decoration: none; font-family: 'Verdana', sans-serif;">Herta Wiki</a>
+			</li>
+			<li style="display: inline; margin-right: 10px; color: #87cefa;">
+			  <a href="https://honkai-star-rail.fandom.com/wiki/Asta" target="_blank" style="color: #87cefa; text-decoration: none; font-family: 'Verdana', sans-serif;">Asta Wiki</a>
+			</li>
+			<li style="display: inline; margin-right: 10px; color: #87cefa;">
+			  <a href="https://honkai-star-rail.fandom.com/wiki/Arlan" target="_blank" style="color: #87cefa; text-decoration: none; font-family: 'Verdana', sans-serif;">Arlan Wiki</a>
+			</li>
+			<li style="display: inline; color: #87cefa;">
+			  <a href="https://honkai-star-rail.fandom.com/wiki/Ruan_Mei" target="_blank" style="color: #87cefa; text-decoration: none; font-family: 'Verdana', sans-serif;">Ruan Mei Wiki</a>
+			</li>
+		  </ul>
+		</p>
+	</div>
+	
+      <!-- Contact section -->
+    <div id="contactContent" class="content-section">
+        <h2>Feel free to use the following contact information for more details:</h2>
+          <ul style="list-style: none; padding: 0; margin: 0; text-align: center; font-family: 'Verdana', sans-serif;">
+            <li style="display: inline; margin-right: 10px; color: #87cefa;">
+              <p style="color: #ffffff; text-decoration: none; font-family: 'Verdana', sans-serif;">Outlook Email Address: agdelacasa@mcm.edu.ph</p>
+            </li>
+            <li style="display: inline; margin-right: 10px; color: #87cefa;">
+              <p style="color: #ffffff; text-decoration: none; font-family: 'Verdana', sans-serif;">GMail Email Address: angelica020403@gmail.com</p>
+            </li>
+            <li style="display: inline; margin-right: 10px; color: #87cefa;">
+              <p style="color: #ffffff; text-decoration: none; font-family: 'Verdana', sans-serif;">Cellphone Number: 0945 448 6027</p>
+            </li>
+          </ul>
+    </div>
+  </main>
+
+  <canvas id="myCanvas"></canvas>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="audio/HSR login BGM.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+	<script>
+	  document.addEventListener('DOMContentLoaded', function () {
+		showContent('homeContent');
+
+		var navLinks = document.querySelectorAll('nav a');
+		navLinks.forEach(function (link) {
+		  link.addEventListener('click', function (event) {
+			event.preventDefault();
+			var sectionId = this.getAttribute('data-section');
+			showContent(sectionId);
+		  });
+		});
+
+		var audioElement = document.querySelector('audio');
+		if (audioElement) {
+		  document.addEventListener('click', function () {
+			audioElement.play().catch(function (error) {
+			  console.error("Autoplay was prevented:", error);
+			});
+		  });
+		}
+	  });
+
+	  function showContent(sectionId) {
+		var contentSections = document.querySelectorAll('.content-section');
+		contentSections.forEach(function (section) {
+		  section.style.display = 'none';
+		});
+
+		var selectedSection = document.getElementById(sectionId);
+		if (selectedSection) {
+		  selectedSection.style.display = 'block';
+		}
+	  }
+	</script>	
+</body>
+</html>
